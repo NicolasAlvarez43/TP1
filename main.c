@@ -4,25 +4,21 @@ Alvarez Pedro Jose Nicolas
 #include <stdio.h>
 #include <ctype.h>
 
+
 int main ()
 {
   
   char caracter;
-  int  aux;
  puts ("Ingrese cadena de caracteres y presione enter:");
    while ((caracter=getchar ()) != EOF )
    { 
    
-   	if (isdigit(caracter))
-	   {
-   		aux = 1;
-	   } else { aux=0;
-	   }
- 	 if (islower(caracter) && aux==0  ) 
+  
+ 	 if (islower(caracter) && !isdigit(caracter)  ) 
       { 
 	  	putchar (toupper(caracter));
       }
-     else if (aux==0)
+     else if (!isdigit(caracter) )
 	 {
 	 putchar(tolower(caracter));
 	 }
